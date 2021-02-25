@@ -85,7 +85,7 @@ body{
 .meal-result{
     margin-top: 4rem;
 }
-.meal{
+#meal{
     margin: 2.4rem 0;
 }
 .meal-item{
@@ -128,11 +128,11 @@ body{
     color: #fff;
     background: var(--tenne-tawny);
     border-radius: 1rem;
-    width: 90%;
-    height: 90%;
+    width: 50%;
+    height: 50%;
     overflow-y: scroll;
     display: none;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 .meal-details::-webkit-scrollbar{
     width: 10px;
@@ -140,13 +140,16 @@ body{
 .meal-details::-webkit-scrollbar-thumb{
     background: #f0f0f0;
     border-radius: 2rem;
-}
-
-.showRecipe{
-    display: block;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
 .meal-details-content{
     margin: 2rem;
+}
+.meal-details-content p:not(.recipe-category){
+    padding: 1rem 0;
 }
 .recipe-close-btn{
     position: absolute;
@@ -185,6 +188,28 @@ body{
     margin: 0 auto;
     display: block;
 }
+.recipe-link{
+    margin: 1.4rem 0;
+}
+.recipe-link a{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+.recipe-link a:hover{
+    opacity: 0.8;
+}
+
+/* js related */
+
+.showRecipe{
+    display: block;
+}
 .notFound{
     grid-template-columns: 1fr!important;
     color: var(--tenne-tawny);
@@ -215,7 +240,7 @@ body{
 @media screen and (min-width: 992px){
     #meal{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
     }
 }
