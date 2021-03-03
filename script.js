@@ -3,6 +3,14 @@ const mealList = document.getElementById('meal');
 const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
 
+// search enter option 
+document.getElementById("search-input")
+.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        document.getElementById("search-btn").click();
+    }
+});
+
 // event listeners
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe)
